@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}En cave{% endblock %}
+
+{% block body %}
+<main>
+    <div class="row no-gutters">
+        {% for wine in wines %}
+            <div class="col-12 col-lg-6 p1">
+                <div class="card mb-3">
+                    <div class="row no-gutters align-items-center p-2">
+                        <div class="col-12 col-md-4">
+                           <img src="{{asset('images/' ~ wine.denomination.file)}}" class="card-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</main>
+{% endblock %}

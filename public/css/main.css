@@ -1,0 +1,9 @@
+
+/* GENERAL */
+#logo {
+    width: 40%;
+    height: auto;
+}
+.simpleNav a, nav a {
+    color: #fff !important;
+}

@@ -10,7 +10,20 @@
                 <div class="card mb-3">
                     <div class="row no-gutters align-items-center p-2">
                         <div class="col-12 col-md-4">
-                           <img src="{{asset('images/' ~ wine.denomination.file)}}" class="card-img">
+                           <img src="{{asset('images/' ~ wine.denomination.file)}}" class="card-img"> {# Récupère les images en BDD #}
+                        </div>
+                        <div class="col">
+                            <div class="card-body">
+                                <h2 class="card-title">{{wine.denomination.field}}</h2>
+                                    <ul>
+                                       <li>Région : {{wine.denomination.territory.region}} </li>
+                                       <li>Appellation : {{wine.denomination.appellation}} </li>
+                                       <li>Domaine : {{wine.denomination.field}} </li>
+                                       <li>Millésimes : {{wine.year}} </li>
+                                       <li>Conservation : {{wine.conservation}} </li>
+                                       <li>Couleur : {{wine.color}} </li>                      
+                                    </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

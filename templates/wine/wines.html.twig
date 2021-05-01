@@ -20,7 +20,7 @@
                                        <li>Appellation : {{wine.denomination.appellation}} </li>
                                        <li>Domaine : {{wine.denomination.field}} </li>
                                        <li>Millésimes : {{wine.year}} </li>
-                                       <li>Conservation : {{wine.conservation}} </li>
+                                       <li>Boire ou garder : {{wine.conservation}} - {{wine.conservation}} </li>
                                        <li>Couleur : {{wine.color}} </li>                      
                                     </ul>
                             </div>
@@ -30,5 +30,8 @@
             </div>
         {% endfor %}
     </div>
+    <div class="navigation">
+    {{ knp_pagination_render(wines) }}
+</div>
 </main>
 {% endblock %}

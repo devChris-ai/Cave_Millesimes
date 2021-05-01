@@ -3,7 +3,9 @@
 namespace App\Repository;
 
 use App\Entity\Wine;
+use Doctrine\ORM\Query;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+// use Doctrine\Migrations\Query\Query;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -17,6 +19,11 @@ class WineRepository extends ServiceEntityRepository
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Wine::class);
+    }
+
+    public function findAllWithPagination() : Query{
+        return $this->createQueryBuilder('v')
+            ->getQuery();
     }
 
     // /**
